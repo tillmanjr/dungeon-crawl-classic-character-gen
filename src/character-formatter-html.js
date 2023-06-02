@@ -5,9 +5,10 @@
  * @param {*} character
  * @return {*} 
  */
-function formatCharacterAsHtml(character) {
+function formatCharacterAsHtml(character, container_id = '') {
+  const id_attr = container_id ? ` id="${container_id}" ` : ' '
     const resultArray = []
-    resultArray.push('<div class="characterContainer">')
+    resultArray.push(`<div class="characterContainer" ${id_attr}>`)
       resultArray.push('<div class="characterHeader">')
     resultArray.push(`<span class="nameLabel">Name:</span> <span class="nameValue">${character.Name}</span><span class="raceLabel">Race:</span><span class="raceValue">${character.Race}</span>`)
       resultArray.push('</div>') // end characterHeader
@@ -81,7 +82,7 @@ function formatCharacterAsHtml(character) {
     resultArray.push('<div class="weaponsDiv">')
     resultArray.push('<div><b>Weapons</b></div>')
     resultArray.push('<table class="weaponsTable"><tbody>')
-    resultArray.push(`<tr><td>${character.TrainedWeapon}</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr>`)
+      resultArray.push(`<tr><td>${character.TrainedWeapon}</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr>`)
     resultArray.push('</tbody></table>')
       resultArray.push('</div>')  // end weaponsDiv
     resultArray.push('</div>')  // end detailsMidDiv

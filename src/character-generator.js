@@ -1,4 +1,7 @@
 
+const { DiceBag } = dice_bag
+
+
 // look up modifier for attribute value
 const modifierLookup = [
     NaN, //0
@@ -463,10 +466,15 @@ class Character {
 
 }
 
-function GenerateCharacter() {
+function _GenerateCharacter() {
     return new Character()
 }
 
-function LoadCharacter(fromJsonString) {
+function _LoadCharacter(fromJsonString) {
     return new Character(fromJsonString)
+}
+
+const character_generator = {
+    GenerateCharacter: _GenerateCharacter,
+    LoadCharacter: _LoadCharacter
 }

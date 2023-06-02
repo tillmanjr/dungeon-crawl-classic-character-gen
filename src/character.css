@@ -4,11 +4,12 @@
 }
 
 .characterContainer {
-    width: 800px;
+    width: 725px;
     height: 450px;
     border: 3px solid black;
     border-radius: 12px;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 .characterHeader {
@@ -383,8 +384,59 @@ td {
     padding-right: 5px;
 }
 
+.commands {
+    margin: 10px;
+}
+
+button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.outputPair {
+    margin: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    width:1570px;
+}
+
+.command-section {
+    vertical-align: top;
+}
+
+.command-left {
+    width: 200px;
+}
+.command-mid {
+    width: 200px;
+}
+.command-right {
+    width: 200px;
+}
+
 @media print {
     .commands {
         visibility: hidden;
+        display: none;
     }
+
+    body {
+        transform: scale(0.99);
+    }
+
 }
+
+@page {
+    size: letter landscape;
+    margin: 0;
+  }
+

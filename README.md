@@ -28,3 +28,35 @@ You'll see four _New Character_ buttons, one for each of the four characters whi
 ### Printing  
 Generate your four characters then Ctrl-P (Cmd-P if using Fisher-Price OS) to invoke print, ensure Landscape layour is selected, then print.  
 NOTE: the resulting to be printed character sheet will not contain the _New Character_ buttons   
+  
+## Hacky convention  
+I use the following convention in Javascript files.
+It fakes -sorta- the appearance of modules for script files loaded using simple `src` tags in HTML and in a manner that indicate the intended exports:  
+__declaration__   
+```
+// my-file.js
+
+function _fnOne ...
+
+function _fnTwo ...
+
+...
+
+const my_file = {
+    fnOne: _fnOne,
+    fnTwo: _fnTwo
+}
+```
+__usage__  
+```
+// calculate.js
+
+const {
+    fnOne,
+    fnTwo
+} = my_file
+
+// use fnOne or fnTwo as needed
+
+```
+
