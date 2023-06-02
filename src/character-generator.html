@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="character.css" />
+    <script src="dice-bag.js"></script>
+    <script src="character-generator.js"></script>
+    <script src="character-formatter-html.js"></script>
+</head>
+
+<body>
+    <script>
+        function doNewCharacter(divId) {
+            const character = GenerateCharacter()
+            // serialized can be passed to LoadCharacter to reinstantiate it
+            const serialized = character.asJsonStr()
+            console.log('serialized', serialized)
+
+            const output = document.getElementById(divId)
+
+            const asText = formatCharacterAsHtml(character)
+            output.innerHTML = asText
+        }
+    </script>
+    <div class="header">
+
+    </div>
+    <div class="commands">
+        <button id="createNewCharacter01" onclick="doNewCharacter('output01')">New Character</button>
+        <button id="createNewCharacter02" onclick="doNewCharacter('output02')">New Character</button>
+        <br />
+        <button id="createNewCharacter03" onclick="doNewCharacter('output03')">New Character</button>
+        <button id="createNewCharacter04" onclick="doNewCharacter('output04')">New Character</button>
+    </div>
+    <div class="output" id="output01"></div>
+    <div class="output" id="output02"></div>
+    <br />
+    <div class="output" id="output03"></div>
+    <div class="output" id="output04"></div>
+</body>
+
+</html>
