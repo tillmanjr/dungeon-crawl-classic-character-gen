@@ -23,7 +23,6 @@ The code is somewhat cobbled together. The html formatter is a textbook of how n
 ## To Use:  
   
 Open `src/character-generator.html` in any modern browser.  
-You'll see four _New Character_ buttons, one for each of the four characters which can be generated - yeah, not elegant, but the final results are darn good.  
   
 ### Printing  
 Generate your four characters then Ctrl-P (Cmd-P if using Fisher-Price OS) to invoke print, ensure Landscape layour is selected, then print.  
