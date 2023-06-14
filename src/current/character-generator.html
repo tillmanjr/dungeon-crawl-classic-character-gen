@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+
+<body>
+    <link rel="stylesheet" href="character.css" />
+    <script src="version.js"></script>
+    <script src="dice-bag.js"></script>
+    <script src="lookups.js"></script>
+    <script src="character-generator.js"></script>
+    <script src="character-formatter-html.js"></script>
+    <script>
+        const {GenerateCharacter} = character_generator
+
+        function showRecreate() {
+            const el = document.getElementById("recreate-section");
+            el.classList.remove("display-none")
+            el.classList.add("display-inline-block")
+        }
+        function showPrint() {
+            const el = document.getElementById("print-section");
+            el.classList.remove("display-none")
+            el.classList.add("display-inline-block")
+        }
+        function doNewCharacter(divId, contentId) {
+            const character = GenerateCharacter()
+            // serialized can be passed to LoadCharacter to reinstantiate it
+            const serialized = character.asJsonStr()
+            console.log('serialized', serialized)
+
+            const output = document.getElementById(divId)
+
+            const asText = formatCharacterAsHtml(character, contentId)
+            output.innerHTML = asText
+        }
+        function doAllFour() {
+            doNewCharacter('output01', 'character01')
+            doNewCharacter('output02', 'character02')
+            doNewCharacter('output03', 'character03')
+            doNewCharacter('output04', 'character04')
+            showRecreate()
+            showPrint()
+        }
+        function printCharacters() {
+            window.print()
+        }
+        function nameElementsFromIds(nameValueId, nameInputId) {
+            const nameValueElement = document.getElementById(nameValueId)
+            const nameInputElement = document.getElementById(nameInputId)
+
+            return {
+                nameValueElement,
+                nameInputElement
+            }
+
+        }
+        function setUiNameEdit(nameValueElement, nameInputElement) {
+            nameValueElement.classList.remove("display-inline-block")
+            nameValueElement.classList.add("display-none")
+            
+            nameInputElement.classList.remove("display-none")
+            nameInputElement.classList.add("display-inline-block")
+        }
+        function setUiNameValue(nameValueElement, nameInputElement) {
+            
+            nameInputElement.classList.remove("display-inline-block")
+            nameInputElement.classList.add("display-none")
+
+            nameValueElement.classList.remove("display-none")
+            nameValueElement.classList.add("display-inline-block")
+        }
+
+        function handleNameValueClick (nameValueId, nameInputId) {
+            const {
+                nameValueElement,
+                nameInputElement
+            } = nameElementsFromIds(nameValueId, nameInputId)
+            setUiNameEdit (nameValueElement, nameInputElement)
+            nameInputElement.focus()
+            nameInputElement.select()
+        }
+
+        function handleNameEditorBlur(nameValueId, nameInputId) {
+            const {
+                nameValueElement,
+                nameInputElement
+            } = nameElementsFromIds(nameValueId, nameInputId)
+            nameValueElement.innerHTML = nameInputElement.value
+            setUiNameValue(nameValueElement, nameInputElement)
+        }
+    </script>
+    <div class="header">
+
+    </div>
+    <div class="commands">
+        <div class="command-left command-section display-inline-block" id="command-left">
+            <b>Create</b>
+            <br />
+            <button id="createFourNewCharacters" onclick="doAllFour()">New Characters</button>
+        </div>
+        
+        <div class="command-mid command-section display-none" id="recreate-section">
+            <b>Recreate</b>
+            <br />
+            <button id="createNewCharacter01" onclick="doNewCharacter('output01', 'character01')">Character</button>
+            <button id="createNewCharacter02" onclick="doNewCharacter('output02', 'character02')">Character</button>
+            <br />
+            <button id="createNewCharacter03" onclick="doNewCharacter('output03', 'character03')">Character</button>
+            <button id="createNewCharacter04" onclick="doNewCharacter('output04', 'character04')">Character</button>
+        </div>
+        <div class="command-right command-section display-none" id="print-section">
+            <b>Print</b>
+            <br />
+            <button id="printCharacters" onclick="printCharacters()">Characters</button>
+        </div>
+    </div>
+    <div class="outputPair">
+        <div class="output" id="output01"></div>
+        <div class="output" id="output02"></div>
+    </div>
+
+    <div class="outputPair">
+        <div class="output" id="output03"></div>
+        <div class="output" id="output04"></div>
+    </div>
+    <div class="version-footer" id="version-footer-id"></div>
+    <script>
+        window.addEventListener('load', (event) => {
+            const footer = document.getElementById("version-footer-id")
+            footer.innerHTML = FormattedVersionArray.join(' <br /> ')
+        })
+    </script>
+</body>
+
+</html>

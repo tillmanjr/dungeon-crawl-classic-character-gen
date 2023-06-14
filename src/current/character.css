@@ -1,0 +1,465 @@
+.output {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.characterContainer {
+    width: 725px;
+    height: 450px;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.characterHeader {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.characterDetailsDiv {
+    width: 790px;
+    vertical-align: top;
+    height: 200px;
+}
+
+.detailsLeftDiv {
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.detailsMidDiv {
+    width: 220px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.detailsRightDiv {
+    width: 230px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nameLabel {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.nameValue {
+    font-size: xx-large;
+    margin-right: 5px;
+    min-width: 440px;
+    color: #CCC;
+    border: none;
+}
+.nameInput {
+    border: none;
+    font-size: x-large;
+    margin-right: 3px;
+    min-width: 438px;
+    max-width: 438px;
+    color: #CCC;
+}
+.nameInput:focus {
+    border: black solid 1px;
+    font-size: x-large;
+    margin-right: 3px;
+    min-width: 438px;
+    max-width: 438px;
+    color: #CCC;
+}
+
+.raceLabel {
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.raceValue {
+    font-size: x-large;
+    display: inline-block;
+}
+
+.speedLabel {
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.speedValue {
+    font-size: x-large;
+    margin-right: 20px;
+    border: 1px solid black;
+    min-width: 40px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.initLabel {
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.initValue {
+    font-size: x-large;
+    border: 1px solid black;
+    min-width: 40px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.equipmentDiv {
+    margin-top: 10px;
+}
+
+.equipmentInnerDiv {
+    border: 1px solid #686868;
+    width: 230px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    min-height: 138px;
+}
+
+.equipmentValue {
+    display: block;
+    padding-left: 3px;
+}
+
+.achpImageDiv {
+    width: 180px;
+    display: inline-block;
+}
+
+.occupationAlignmentDiv {
+    width: 500px;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.occupationLabel {
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.occupationValue {
+    font-size: x-large;
+    border: 3px solid black;
+    display: inline-block;
+    width: 280px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+.alignmentLabel {
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.lawLabel {
+    font-size: x-large;
+    display: inline-block;
+    margin-left: 150px;
+    font-weight: bold;
+}
+
+.neutralLabel {
+    font-size: x-large;
+    display: inline-block;
+    margin-left: 45px;
+    font-weight: bold;
+}
+
+.chaosLabel {
+    font-size: x-large;
+    display: inline-block;
+    margin-left: 45px;
+    font-weight: bold;
+}
+
+.lawBox {
+    font-size: x-large;
+    display: inline-block;
+    margin-left: 22px;
+    min-width: 25px;
+    border: 3px solid black;
+}
+
+.neutralBox {
+    font-size: x-large;
+    display: inline-block;
+    margin-left: 75px;
+    min-width: 25px;
+    border: 3px solid black;
+}
+
+.chaosBox {
+    font-size: x-large;
+    display: inline-block;
+    margin-left: 85px;
+    min-width: 25px;
+    border: 3px solid black;
+}
+
+.characterFooter {
+    display: block;
+    min-width: 800px;
+    margin-top: 20px;
+
+}
+
+.characterFooterNotes {
+    display: inline-block;
+    border: 2px solid black;
+    padding-left: 3px;
+    padding-top: 3px;
+    min-width: 600px;
+    margin-right: 0px;
+    min-height: 54px;
+
+}
+
+.characterFooterExp {
+    display: inline-block;
+    border: 2px solid black;
+    padding-left: 3px;
+    padding-top: 3px;
+    min-width: 97px;
+    margin-left: 0px;
+    min-height: 54px;
+    vertical-align: top;
+    left: -5px;
+    position: relative;
+
+}
+
+.hpacDiv {
+    width: 250px;
+    padding-right: 1px;
+    float: left;
+}
+
+.hpacTable {
+    margin-left: 10px;
+    padding-right: 1px;
+}
+
+.speedinitDiv {
+    margin-left: 1px;
+    width: 270px;
+    margin-top: 20px;
+}
+
+.speedinitTable {
+    border: 0;
+}
+
+.attrDiv {
+    width: 230px;
+    padding-right: 1px;
+    float: left;
+}
+
+.attrtable {
+    margin-left: 10px;
+    padding-right: 1px;
+}
+
+.savesDiv {
+    width: 200px;
+    margin-left: 5px;
+}
+
+.savesInnerDiv {
+    border: 1px solid #686868;
+    border-radius: 8px;
+    width: 160px;
+    padding-bottom: 3px;
+}
+
+.savesTable {
+    width: 150px;
+}
+
+.weaponsDiv {
+    display: block;
+    width: 190;
+    margin-left: 5px;
+    padding-top: 15px;
+}
+
+.weaponsTable {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 190px;
+}
+
+.weaponsTable tr td {
+    border: 2px solid black;
+}
+
+td {
+    min-width: 40px;
+    padding-left: 10px;
+}
+
+.heartDiv {
+    display: inline-block;
+    z-index: 1;
+    height: 65px;
+    width: 65px;
+    left: 10px;
+    top: 0px;
+}
+
+.heart {
+    z-index: 2;
+    display: inline-block;
+    width: 100px;
+    aspect-ratio: 1;
+    border-image: radial-gradient(red 69%, #0000 70%) 84.5%/50%;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+
+.hpDiv {
+    width: 72px;
+    margin-top: 15px;
+    margin-left: 0px;
+    font-size: x-large;
+    display: inline-block;
+    z-index: 3;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+}
+
+.shieldDiv {
+    display: inline-block;
+    z-index: 1;
+    left: 40px;
+    top: 20px;
+    margin-right: 20px;
+}
+
+.shield {
+    left: 40px;
+    top: 40px;
+
+    z-index: 2;
+    height: 60px;
+    width: 60px;
+    border: 3px solid black;
+    border-radius: 50% 50% 50% 50% / 12% 12% 88% 88%;
+}
+
+.acDiv {
+    width: 63px;
+    margin-top: 15px;
+    margin-left: 0px;
+    font-size: x-large;
+    font-weight: 700;
+    display: inline-block;
+    z-index: 3;
+    text-align: center;
+}
+
+.shieldHeartLabelsDiv {
+    display: block;
+    width: 134px;
+    text-align: center;
+}
+
+.right50 {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.left50 {
+    display: inline-block;
+    width: 50%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.brdr {
+    border: 2px solid black;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.commands {
+    margin: 10px;
+}
+
+button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.outputPair {
+    margin: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    width:1570px;
+}
+
+.command-section {
+    vertical-align: top;
+}
+
+.command-left {
+    width: 200px;
+}
+.command-mid {
+    width: 200px;
+}
+.command-right {
+    width: 200px;
+}
+.version-footer {
+    padding: 20px;
+    margin: 20px;
+    font-size: small;
+    font-style: italic;
+    color: gray;
+}
+
+@media print {
+    .commands {
+        visibility: hidden;
+        display: none;
+    }
+
+    body {
+        transform: scale(0.99);
+    }
+
+}
+
+@page {
+    size: letter landscape;
+    margin: 0;
+  }
+
